@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "mediainfo.js": "^0.1.4",
+    "mp4box": "^0.4.1"
+  }
+}
