@@ -2,7 +2,7 @@
 
 JavaScript library that use both mediainfo.js and mp4box for detect video codec
 
-API
+Example
 ===
 ```javascript
 const fs = require('fs')
