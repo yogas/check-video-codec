@@ -1,6 +1,6 @@
 # check-mp4-codec
 
-JavaScript library for that use both mediainfo.js and mp4box for detect video codec
+JavaScript library that use both mediainfo.js and mp4box for detect video codec
 
 API
 ===
