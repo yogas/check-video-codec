@@ -1,4 +1,4 @@
-# check-mp4-codec
+# check-video-codec
 
 JavaScript library that use both mediainfo.js and mp4box for detect video codec
 
