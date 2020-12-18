@@ -2,7 +2,7 @@
   "name": "@nimbus/check-video-codec",
   "version": "1.0.0",
   "description": "For checking video codecs and then use in video.canPlayType()",
-  "main": "dist/check-mp4-codec.js",
+  "main": "dist/check-video-codec.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +21,10 @@
     "mp4box",
     "mediainfo.js"
   ],
-  "author": "Vladimir Shapovalov",
+  "author": {
+    "name": "Vladimir Shapovalov",
+    "email": "vladimir.shapovalov@nimbusweb.co",
+    "url": "https://nimbusweb.co"
+  },
   "license": "ISC"
 }
