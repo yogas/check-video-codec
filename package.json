@@ -1,6 +1,26 @@
 {
+  "name": "@nimbus/check-video-codec",
+  "version": "1.0.0",
+  "description": "For checking video codecs and then use in video.canPlayType()",
+  "main": "dist/check-mp4-codec.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yogas/check-video-codec.git"
+  },
   "dependencies": {
     "mediainfo.js": "^0.1.4",
     "mp4box": "^0.4.1"
-  }
+  },
+  "keywords": [
+    "mp4",
+    "video",
+    "codec",
+    "mp4box",
+    "mediainfo.js"
+  ],
+  "author": "Vladimir Shapovalov",
+  "license": "ISC"
 }

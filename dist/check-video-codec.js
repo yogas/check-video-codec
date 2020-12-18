@@ -10,7 +10,7 @@ class CheckMp4BoxCodec {
     mp4BoxInfo = null
     mp4BoxFileStart = 0
     chunksLength = 0;
-    
+
     constructor() {
         this.initMp4Box()
     }
@@ -65,7 +65,7 @@ class CheckMp4BoxCodec {
         this.mp4BoxFile.appendBuffer(ab)
         this.mp4BoxFileStart += buf.length
         this.chunksLength ++
-        
+
         return new Promise((resolve, reject) => {
             resolve(this.mp4BoxInfo)
         })
@@ -101,9 +101,9 @@ class CheckMediainfoCodec {
     check = async (buf) => {
         if(!this.mediainfo) throw new Error('have to init mediainfo')
         this.chunks.push(buf)
-        
+
         if (!this.mediainfo) return false
-        
+
         const buffer = Buffer.concat(this.chunks)
 
         const info = await this.mediainfo.analyzeData(() => buffer.length, () => buffer)
@@ -122,10 +122,10 @@ class CheckMediainfoCodec {
  * Класс CheckMp4Codec
  * Предназначен для получения информации от mp4box.js и mediainfo.js
  */
-class CheckMp4Codec {
+class CheckVideoCodec {
     mp4box = null
     mediainfo = null
-    
+
     constructor() {
         this.mp4box = new CheckMp4BoxCodec()
         this.mediainfo = new CheckMediainfoCodec()
@@ -153,17 +153,17 @@ class CheckMp4Codec {
             if(!mp4box && mi && this.mp4box.chunksLength < 2) {
                 return null
             }
-            
+
             if(mp4box) {
                 codecs = {mime: mp4box.mime}
             }
-            
+
             if(mi) {
                 const [
-                    general, 
+                    general,
                     video
-                ] = mi.media.track 
-                
+                ] = mi.media.track
+
                 if(general) {
                     codecs = {
                         ...codecs, general: {
@@ -173,7 +173,7 @@ class CheckMp4Codec {
                         }
                     }
                 }
-                
+
                 if(video) {
                     codecs = {
                         ...codecs, video: {
@@ -182,14 +182,14 @@ class CheckMp4Codec {
                         }
                     }
                 }
-                
+
             }
-            
+
             return new Promise(resolve => resolve(codecs));
         }
-        
+
         return res
     }
 }
 
-module.exports = CheckMp4Codec
+module.exports = CheckVideoCodec
