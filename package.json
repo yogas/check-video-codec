@@ -1,6 +1,6 @@
 {
-  "name": "@nimbus/check-video-codec",
-  "version": "1.0.0",
+  "name": "check-video-codec",
+  "version": "1.1.0",
   "description": "For checking video codecs and then use in video.canPlayType()",
   "main": "dist/check-video-codec.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yogas/check-video-codec.git"
+    "url": "git+https://github.com/yogas/check-video-codec.git"
   },
   "dependencies": {
     "mediainfo.js": "^0.1.4",
@@ -21,10 +21,14 @@
     "mp4box",
     "mediainfo.js"
   ],
-  "author": {
-    "name": "Vladimir Shapovalov",
-    "email": "vladimir.shapovalov@nimbusweb.co",
-    "url": "https://nimbusweb.co"
+  "author": "Vladimir Shapovalov <vladimir.shapovalov@nimbusweb.co> (https://nimbusweb.co)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yogas/check-video-codec/issues"
   },
-  "license": "MIT"
+  "homepage": "https://github.com/yogas/check-video-codec#readme",
+  "directories": {
+    "example": "examples"
+  },
+  "devDependencies": {}
 }
